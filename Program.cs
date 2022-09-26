@@ -4,7 +4,15 @@ Console.WriteLine("Hello, World!");
 
 var pythonEngine = new PythonEngine("C:/MyPorjects/IronPythonTest/Python/test.py");
 
-object[] parameters = new object[] {3, 4};
-var result = pythonEngine.InvokeMethodWithParameters("add", parameters);
+object[] parameters = new object[] {
+    new List<string>() {"hello", "world"}
+};
+var result = pythonEngine.InvokeMethodWithParameters("main", parameters);
 
-Console.WriteLine(result);
+if (result != null)
+{
+	foreach (var item in result)
+    {
+        Console.WriteLine(item);
+    }
+}

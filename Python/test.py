@@ -1,6 +1,4 @@
-def add(x, y):
-        return x + y
-
-def increment(self, x):
-    x += 1
-    return x
+def main(c_list):
+    List = list(c_list)
+    List.append("from python")
+    return List
